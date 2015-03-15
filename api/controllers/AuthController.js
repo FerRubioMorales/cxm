@@ -161,9 +161,11 @@ var AuthController = {
           return tryAgain();
         }
 
+          var redirect = req.session.returnTo || "/";
         // Upon successful login, send the user to the homepage were req.user
         // will available.
-        res.redirect('/');
+
+          res.redirect(redirect);
       });
     });
   },
