@@ -6,10 +6,6 @@
  */
 
 module.exports = {
-
-    create: function(){
-        res.send("works");
-    }
-
+	
 };
 
