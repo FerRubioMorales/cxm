@@ -218,7 +218,6 @@
             <% console.log("res", res.locals.scripts); %>
             <% if(res.locals.scripts) { %>
                 <% res.locals.scripts.forEach(function(script, i ) { %>
-                    <% console.log(script); %>
                     <script src="<%= script %>" ></script>
                 <% }) %>
             <% }%>
