@@ -1,3 +1,5 @@
-# cxmclone
+# cxm
 
-a [Sails](http://sailsjs.org) application
+#Run:
+
+    Once you cloned the project run "npm install".
