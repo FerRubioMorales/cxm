@@ -1,7 +1,7 @@
-// api/models/User.js
+// api/controllers/RoleController.js
 
 var _ = require('lodash');
-var _super = require('sails-permissions/api/models/User');
+var _super = require('sails-permissions/api/controllers/RoleController');
 
 _.merge(exports, _super);
 _.merge(exports, {

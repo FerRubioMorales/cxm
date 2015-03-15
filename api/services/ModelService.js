@@ -1,12 +1,12 @@
-// api/services/protocols/oauth2.js
+// api/services/ModelService.js
 
 var _ = require('lodash');
-var _super = require('sails-permissions/api/services/protocols/oauth2');
+var _super = require('sails-permissions/api/services/ModelService');
 
-function protocols () { }
+function ModelService () { }
 
-protocols.prototype = Object.create(_super);
-_.extend(protocols.prototype, {
+ModelService.prototype = Object.create(_super);
+_.extend(ModelService.prototype, {
 
   // Extend with custom logic here by adding additional fields and methods,
   // and/or overriding methods in the superclass.
@@ -22,4 +22,4 @@ _.extend(protocols.prototype, {
    */
 });
 
-module.exports = new protocols();
+module.exports = new ModelService();
