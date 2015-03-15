@@ -1,4 +1,15 @@
 {
   "Welcome": "Bienvenido",
-  "A brand new app.": "Una aplicación de la nueva marca."
+  "A brand new app.": "Una aplicación de la nueva marca.",
+  "Error.Passport.Password.Invalid": "La contraseña proporcionada no es valida!",
+  "Error.Passport.Password.Wrong": "Whops, contraseña incorrecta!",
+  "Error.Passport.Password.NotSet": "No puede ser! Todavía no tienes contraseña!",
+  "Error.Passport.Username.NotFound": "Uhm...¿Puedes repetir tu nombre de usuario de nuevo?",
+  "Error.Passport.User.Exists": "El usuario ya existe.",
+  "Error.Passport.Email.NotFound": "No hemos encontrado ese email",
+  "Error.Passport.Email.Missing": "Necesitas introducir un correo para la verificación",
+  "Error.Passport.Email.Exists": "El correo ya existe. Intenta loguear.",
+  "Error.Passport.Username.Missing": "Necesitas introducir un nombre de usuario",
+  "Error.Passport.Password.Missing": "Oh no! Aún no tienes contraseña!",
+  "Error.Passport.Generic": "Oops... Algo no ha ido bien"
 }
