@@ -1,7 +1,7 @@
 {
-  "name": "cxmclone",
+  "name": "CXM",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
@@ -35,8 +35,8 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/cxmclone.git"
+    "url": "https://github.com/cronosmen/cxm.git"
   },
-  "author": "anonymous node/sails user",
+  "author": "Fernando Rubio @cronosmen",
   "license": ""
 }
