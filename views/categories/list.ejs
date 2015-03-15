@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Categories <small> Management</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-dashboard"></i> List
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>URL SEO</th>
+                <th>Navigation</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% categories.forEach(function(cat){ %>
+                <tr <% if (cat.id == active){%> class="success" <% }%>>
+                    <td><%=cat.title%></td>
+                    <td><%= cat.description%></td>
+                    <td><%= cat.urlseo%></td>
+                    <td><% if(cat.navigation){%>Yes<%}else{%>No<% }%></td>
+                    <td>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-info">Edit</button>
+                    </td>
+                </tr>
+            <% })%>
+            </tbody>
+        </table>
+    </div></div>

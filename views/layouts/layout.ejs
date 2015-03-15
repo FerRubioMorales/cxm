@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/styles/font-awesome.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="/styles/plugins/bootstrap3-dialog.css">
     <link rel="stylesheet" href="/styles/plugins/morris.css">
     <!--STYLES END-->
 </head>
@@ -152,10 +153,10 @@
                     <a href="javascript:;" data-target="#menuOptions" data-toggle="collapse"><i class="fa fa-fw fa-bar-chart-o"></i> Categories  <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="menuOptions" class="collapse">
                         <li>
-                            <a href="/post/create">Create</a>
+                            <a href="/categories/create">Create</a>
                         </li>
                         <li>
-                            <a href="#">View</a>
+                            <a href="/categories/list">View</a>
                         </li>
                     </ul>
                 </li>
@@ -195,12 +196,10 @@
     </nav>
     <div id="page-wrapper">
         <div class="container-fluid">
-            <%- body %>
-
-
             <!--TEMPLATES-->
-            
+            <script type="text/javascript" src="/jst.js"></script>
             <!--TEMPLATES END-->
+            <%- body %>
 
 
             <!--SCRIPTS-->
@@ -208,11 +207,21 @@
             <script src="/js/dependencies/jquery.js"></script>
             <script src="/js/dependencies/bootstrap.js"></script>
             <script src="/js/dependencies/bootstrap.min.js"></script>
+            <script src="/js/controllers/categories/list.js"></script>
+            <script src="/js/plugins/bootstrap3-dialog.js"></script>
             <script src="/js/plugins/morris/morris-data.js"></script>
             <script src="/js/plugins/morris/morris.js"></script>
             <script src="/js/plugins/morris/morris.min.js"></script>
             <script src="/js/plugins/morris/raphael.min.js"></script>
             <!--SCRIPTS END-->
+
+            <% console.log("res", res.locals.scripts); %>
+            <% if(res.locals.scripts) { %>
+                <% res.locals.scripts.forEach(function(script, i ) { %>
+                    <% console.log(script); %>
+                    <script src="<%= script %>" ></script>
+                <% }) %>
+            <% }%>
         </div>
     </div>
 </div>
