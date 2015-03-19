@@ -5,13 +5,13 @@
  * @docs        :: http://sailsjs.org/#!documentation/models
  */
 
-var Categories = {
+module.exports = {
     schema: true,
+
     attributes: {
         title: {
             type: 'string',
-            required: true,
-            unique: true
+            required: true
         },
         parent: {
             type: 'integer',
@@ -27,6 +27,5 @@ var Categories = {
             unique: true
         }
     }
-};
 
-module.exports = Categories;
+};

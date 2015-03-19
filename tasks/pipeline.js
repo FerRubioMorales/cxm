@@ -15,9 +15,9 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-    'styles/bootstrap.css',
-    'styles/sb-admin.css',
-    'styles/**/*.css'
+    'styles/autoload/bootstrap.css',
+    'styles/autoload/sb-admin.css',
+    'styles/autoload/**/*.css'
 ];
 
 // Client-side javascript files to inject in order
@@ -25,17 +25,17 @@ var cssFilesToInject = [
 var jsFilesToInject = [
 
     // Load sails.io before everything else
-    'js/dependencies/sails.io.js',
-    'js/dependencies/jquery.js',
-    'js/dependencies/bootstrap.js',
+    'js/autoload/dependencies/sails.io.js',
+    'js/autoload/dependencies/jquery.js',
+    'js/autoload/dependencies/bootstrap.js',
 
 
     // Dependencies like jQuery, or Angular are brought in here
-    'js/dependencies/**/*.js',
+    'js/autoload/dependencies/**/*.js',
 
     // All of the rest of your client-side js files
     // will be injected here in no particular order.
-    'js/**/*.js'
+    'js/autoload/**/*.js'
 ];
 
 

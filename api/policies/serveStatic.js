@@ -6,13 +6,13 @@ module.exports = function(req, res, next) {
     res.locals.scripts = [];
     res.locals.styles = [];
 
-    if(fs.existsSync(sails.config.asset.js_dir_path + '/' + req.options.controller + '/js/common.js'))
-        res.locals.scripts.push(sails.config.asset.js_public_path+ '/' + req.options.controller + '/js/common.js');
-    if(fs.existsSync(sails.config.asset.css_dir_path + '/' + req.options.controller + '/css/common.css'))
-        res.locals.styles.push(sails.config.asset.css_public_path+ '/' + req.options.controller + '/css/common.css');
-    if(fs.existsSync(sails.config.asset.js_dir_path + '/' + req.options.controller + '/js/' + req.options.action + '.js'))
-        res.locals.scripts.push(sails.config.asset.js_public_path+ '/' + req.options.controller + '/js/' + req.options.action + '.js');
-    if(fs.existsSync(sails.config.asset.css_dir_path + '/' + req.options.controller + '/css/' + req.options.action + '.css'))
-        res.locals.styles.push(sails.config.asset.css_public_path+ '/' + req.options.controller + '/css/' + req.options.action + '.css');
+    if(fs.existsSync(sails.config.asset.js_dir_path + '/' + req.options.controller + '/common.js'))
+        res.locals.scripts.push(sails.config.asset.js_public_path+ '/' + req.options.controller + '/common.js');
+    if(fs.existsSync(sails.config.asset.css_dir_path + '/' + req.options.controller + '/common.css'))
+        res.locals.styles.push(sails.config.asset.css_public_path+ '/' + req.options.controller + '/common.css');
+    if(fs.existsSync(sails.config.asset.js_dir_path + '/' + req.options.controller + '/' + req.options.action + '.js'))
+        res.locals.scripts.push(sails.config.asset.js_public_path+ '/' + req.options.controller + '/' + req.options.action + '.js');
+    if(fs.existsSync(sails.config.asset.css_dir_path + '/' + req.options.controller + '/' + req.options.action + '.css'))
+        res.locals.styles.push(sails.config.asset.css_public_path+ '/' + req.options.controller + '/' + req.options.action + '.css');
     next();
 };

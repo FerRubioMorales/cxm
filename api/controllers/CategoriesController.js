@@ -4,9 +4,9 @@
  * @description :: Server-side logic for managing categories
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
-
-var CategoriesController = {
+module.exports =  {
     create: function(req, res){
+        console.log("accept:", req.get('Accept'));
         if(req.method=="POST"){
             Categories.create({
                 title: req.param("title"),
@@ -14,13 +14,13 @@ var CategoriesController = {
                 urlseo: req.param("urlseo"),
                 navigation: (req.param("navigation")=="on") ? true : false,
                 parent: 0
-            }).exec(function(err, model){
-                if (err) {
-                    res.send('Error:Sorry!Something went Wrong');
-                }else {
-                    res.redirect( 'categories/list/?id='+model.id);
+            }, function(err, mod) {
+                if(err){
+                    res.status(400);
+                    res.json(err);
                 }
-
+                else
+                    res.status(200).json('ok');
             });
         }else{
             Categories.find().exec(function(err, data){
@@ -33,8 +33,6 @@ var CategoriesController = {
     },
 
     list: function(req, res){
-        console.log(req.options.controller);
-        console.log(req.options.action);
         var active = req.param("id") || 0;
         Categories.find().exec(function(err, data){
             res.view({
@@ -44,6 +42,3 @@ var CategoriesController = {
         })
     }
 };
-
-module.exports = CategoriesController;
-
